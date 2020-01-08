@@ -1,0 +1,6 @@
+.DS_Store
+.vscode/
+MiniMaxer.Library/bin/
+MiniMaxer.Library/obj/
+MiniMaxer/bin/
+MiniMaxer/obj/
