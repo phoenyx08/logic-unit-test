@@ -47,6 +47,11 @@ namespace MiniMaxer.Library
                 return false;
             }
 
+            if (maxProfit <= 0) 
+            {
+                return false;
+            }
+
             return true;
         }    
     }

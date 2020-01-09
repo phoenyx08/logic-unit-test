@@ -22,7 +22,7 @@ namespace MiniMaxer
 
             if (!profitCalculator.Process(dataAsArray))
             {
-                Console.WriteLine("Unexpected error occured during the profit calculation");
+                Console.WriteLine("No profit possible or unexpected error occured during the profit calculation");
                 Environment.Exit(-1);
             }
 
@@ -31,7 +31,6 @@ namespace MiniMaxer
                 profitCalculator.GetSellPrice(), 
                 profitCalculator.GetMaxProfit()
             );
-            
         }
     }
 }
