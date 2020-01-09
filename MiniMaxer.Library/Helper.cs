@@ -7,7 +7,7 @@ namespace MiniMaxer.Library
     {
         public static List<int> NormalizeInput (string input)
         {
-            string[] inputAsArray = input.Split(new char[]{','}, StringSplitOptions.RemoveEmptyEntries);
+            string[] inputAsArray = input.Trim().Split(new char[]{','}, StringSplitOptions.RemoveEmptyEntries);
             int[] numbers = new int[inputAsArray.Length];
             List<int> valuesList = new List<int>();
             foreach (var value in inputAsArray)
