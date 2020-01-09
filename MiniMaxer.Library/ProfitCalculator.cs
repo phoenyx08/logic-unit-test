@@ -4,14 +4,27 @@ namespace MiniMaxer.Library
 {
     public class ProfitCalculator
     {
-        public int BuyPrice { get; set; }
-        public int SellPrice { get; set; }
-        public int MaxProfit { get; set; }
+        private int buyPrice { get; set; }
+        private int sellPrice { get; set; }
+        private int maxProfit { get; set; }
+        public int GetBuyPrice()
+        {
+            return buyPrice;
+        }
+        public int GetSellPrice()
+        {
+            return sellPrice;
+        }
+        public int GetMaxProfit()
+        {
+            return maxProfit;
+        }
+        
         public bool Process(int[] data)
         {
-            MaxProfit = 0;
-            BuyPrice = 0;
-            SellPrice = 0;
+            maxProfit = 0;
+            buyPrice = 0;
+            sellPrice = 0;
             int numbersCount = data.Length;
             int profit = 0;
 
@@ -20,16 +33,16 @@ namespace MiniMaxer.Library
                 {
                     profit = data[j] - data[i];
                     
-                    if (profit > MaxProfit)
+                    if (profit > maxProfit)
                     {
-                        MaxProfit = profit;
-                        BuyPrice = data[i];
-                        SellPrice = data[j];
+                        maxProfit = profit;
+                        buyPrice = data[i];
+                        sellPrice = data[j];
                     }
                 }
             }
 
-            if (MaxProfit == 0 && BuyPrice == 0 && SellPrice == 0)
+            if (maxProfit == 0 && buyPrice == 0 && sellPrice == 0)
             {
                 return false;
             }

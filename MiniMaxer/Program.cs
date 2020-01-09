@@ -27,9 +27,9 @@ namespace MiniMaxer
             }
 
             Console.WriteLine("Buy at {0} and sell at {1} for a maximum profit of {2}.", 
-                profitCalculator.BuyPrice, 
-                profitCalculator.SellPrice, 
-                profitCalculator.MaxProfit
+                profitCalculator.GetBuyPrice(), 
+                profitCalculator.GetSellPrice(), 
+                profitCalculator.GetMaxProfit()
             );
             
         }
